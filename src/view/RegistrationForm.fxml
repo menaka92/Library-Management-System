@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
+   <children>
+      <Label layoutX="50.0" layoutY="49.0" text="Registration">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbtnLibrian" layoutX="145.0" layoutY="145.0" mnemonicParsing="false" selected="true" text="Librarian">
+         <toggleGroup>
+            <ToggleGroup fx:id="person" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbtnMember" layoutX="376.0" layoutY="145.0" mnemonicParsing="false" text="Member" toggleGroup="$person" />
+      <TextField fx:id="txtName" layoutX="212.0" layoutY="188.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="212.0" layoutY="227.0" promptText="E-mail" />
+      <Separator layoutX="45.0" layoutY="93.0" prefWidth="200.0" />
+      <TextField fx:id="txtPassword" layoutX="213.0" layoutY="261.0" promptText="Password" />
+      <Hyperlink layoutX="154.0" layoutY="316.0" onAction="#goToLoginFormOnAction" text="Already Have An Account ?" underline="true" />
+      <Button layoutX="335.0" layoutY="315.0" mnemonicParsing="false" onAction="#registrationOnAction" text="Registration" />
+   </children>
+</AnchorPane>
